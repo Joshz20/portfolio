@@ -382,18 +382,13 @@
   </main>
       <!-- particles.js container -->
 
-
       <script src="https://example.com/particles.min.js"></script>
-      <script src="https://example.com/stats.min.js"></script
+      <script src="https://example.com/stats.min.js"></script>
   
   <script>
-   particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.json loaded successfully...');
-}, function(xhr) {
-  console.error('Error loading particles.json:', xhr.status, xhr.statusText);
-  // Handle the loading failure here (e.g., show an error message, use default settings, etc.)
-});
-
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('particles.json loaded...');
+    });
   </script>
 
   <script src="../src/js/app.js"></script>

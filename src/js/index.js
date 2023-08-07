@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // JS FOR 
   const colors = ["#AFBCCF", "#FFAFA3", "#80C4FF", "#FFC470", "#FFADE7","#75D7F0","FFD966","D9B8FF","#85E0A3"];
-  const texts = ["kumusta ?", "Bonjour!", "Hello 👋", "こんにちは •⩊•", "Hola! 你好(nihao)","안녕하세요"];
+  const texts = ["kumusta ?", "Bonjour!", "Hello 👋", "こんにちは •⩊•", "Hola!", "你好(nihao)","안녕하세요"];
 
   let usedTexts = [];
 

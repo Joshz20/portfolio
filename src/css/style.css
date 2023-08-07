@@ -1,0 +1,273 @@
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.display-none{
+    display: none !important;
+}
+
+#landing_section{
+    min-height: 100vh;
+}
+
+#particles-js {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+
+  }
+  
+  #intro {
+    z-index: 1;
+    padding-top: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  #navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  #my_email{
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    right: -80px;
+    position: fixed;
+  }
+
+.dark #social_twitter:hover{
+    color: #1C96E8;
+}
+
+.dark #social_github:hover{
+    color:#152D3C;
+}
+
+.dark #social_facebook:hover{
+    color:#4A7ACB ;
+}
+.dark #social_linkedin:hover{
+    color:#086BCA
+}
+
+.dark #my_email:hover{
+    color:#FFCF00;
+}
+
+ /* for floating divs */
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  .floating-div {
+    position: absolute;
+    background-color: #f2f2f2;
+    text-align: center;
+    cursor: move;
+    opacity: 0.8;
+    animation: floatAnimation 3s infinite alternate;
+    z-index: 20;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+
+  @keyframes floatAnimation {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+
+  .dark #clickableImage{
+    cursor: pointer;
+    filter: brightness(80%);
+    opacity: .9;
+    
+  }
+
+  .dark #clickableImage{
+    cursor: pointer;
+    width: 50%;
+    
+  }
+
+  
+  /* logo slider */
+  .slider {
+    height: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  .slider::before,
+  .slider::after{
+    position:absolute;
+    background-image:linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(255, 255, 255, 0) 100%);
+    content:'';
+    height:100%;width:25%;
+    z-index:2;pointer-events:none;
+  }
+
+  .dark .slider::before,.dark
+  .slider::after{
+    position:absolute;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 100%);
+    content:'';
+    height:100%;width:25%;
+    z-index:2;pointer-events:none;
+  }
+
+  .slider::before{
+    left:0;
+    top:0;
+  }
+  .slider::after{
+    right:0;
+    top:0;
+    transform:rotateZ(180deg);
+  }
+  
+  /*  IMPORTANT CODE BELOW */
+  .slide-track {
+    width: calc(150px * 20);
+    display: flex;
+    animation: scroll 20s linear infinite;
+    justify-content: space-between;
+  }
+  
+  .slide {
+    width: 150px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .dark .slide{
+    filter: brightness(60%);
+  }
+  
+  .slide img {
+    width: 80px;
+  }
+  
+  .slide:hover {
+    transform: scale(0.8);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(calc(-150px * 10));
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
+  /* Stop the entire slide track's animation when hovering over it */
+  .slide-track:hover {
+    animation-play-state: paused;
+  }
+  
+  /* For responsive styles (max-width: 768px) */
+  @media screen and (max-width: 768px) {
+    .slide-track {
+      width: calc(80px * 20);
+    }
+  
+    .slide {
+      width: 80px;
+    }
+  
+    @keyframes scroll {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(calc(-80px * 10));
+      }
+    }
+  }
+  
+  /* Reverse the animation for the second slide track */
+  .slide-track.reverse {
+    animation-direction: reverse;
+  }
+  
+
+/*Projects*/
+.project_image{
+  width: auto;
+  height: auto;
+}
+
+.project_item {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: top 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.project_item:hover .overlay {
+  opacity: 1;
+  top: 0;
+}
+
+#html{
+  color: rgb(221,75,37);
+}
+
+#css{
+  color: #287BBD;
+}
+
+#bootstrap{
+  color: #705A92;
+}
+
+#javaScript{
+  color: #f3df45;
+}
+
+
+#submit:hover{
+  color:white;
+  background-color: black;
+}
+
+.dark #submit:hover{
+  color: black;
+  background-color: white;
+}

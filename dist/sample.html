@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lottie Animation Example</title>
+  <script src=".js"></script>
+</head>
+<body>
+  <main>
+    <section id="contact" class="contact bg-less-dark relative">
+      <!-- Your contact section content -->
+    </section>
+  </main>
+
+  <!-- Add a container for the Lottie animation -->
+  <section>
+    <div id="lottie-container"></div>
+  </section>
+
+  <footer class="footer bg-less-dark">
+    <!-- Your footer content -->
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Select the container element for the Lottie animation
+      const lottieContainer = document.getElementById("lottie-container");
+  
+      // Specify the path to your JSON animation file
+      const animationData = "svg.json";
+  
+      // Load the Lottie animation
+      lottie.loadAnimation({
+        container: lottieContainer,
+        renderer: "svg", // You can choose "svg", "canvas", or "html" based on your preference
+        loop: true,
+        autoplay: true,
+        path: animationData,
+        rendererSettings: {
+          // You can customize the renderer settings here if needed
+          preserveAspectRatio: 'xMidYMid meet',
+        },
+      }).addEventListener("data_failed", function (e) {
+        console.error("Lottie animation failed to load:", e);
+      });
+    });
+  </script>
+</body>
+</html>
